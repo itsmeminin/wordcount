@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Wordcount</h1>
+    <hr>
+    <form action="{% url 'count' %}" method="post">
+      {% csrf_token %}
+      <textarea name="texttocount" rows="8" cols="80"></textarea>
+      <br>
+      <input type="submit" value="Count!">
+    </form>
+  </body>
+</html>
